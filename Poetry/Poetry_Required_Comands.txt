@@ -1,0 +1,22 @@
+Poetry_Available_commands______________________________________________________
+	Essential Commands:
+		  add         	: 	Adds a new dependency to pyproject.toml and installs it.
+		  build       	:     	Builds a package, as a tarball and a wheel by default.
+		  config     :      	Manages configuration settings.
+		  init      	:     	Creates a basic pyproject.toml file in the current directory.
+		  install     :       	Installs the project dependencies.
+		  new   	:      	Creates a new Python project at <path>.
+	 	 remove	:     	Removes a package from the project dependencies.
+		 run       	:         	Runs a command in the appropriate environment.
+		 sync  	:    	Update the project's environment according to the lockfile.
+	Other Commands:
+		  about    	:	Shows information about Poetry.
+		  check      :    	Validates the content of the pyproject.toml file and its consistency with the poetry.lock file.
+		  help     	:     	Displays help for a command.
+		  list    	:   	Lists commands.
+		  lock    	:     	Locks the project dependencies.
+		  publish	:      	Publishes a package to a remote repository.
+		 update    	:    	Update the dependencies as according to the pyproject.toml file.
+	 	 version	:    	Shows the version of the project or bumps it when a valid bump rule is provided.
+		 search  	:       	Searches for packages on remote repositories.
+		 show   	:      	Shows information about packages.
