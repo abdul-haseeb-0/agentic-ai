@@ -31,4 +31,4 @@ This repository contains well-organized, professional notes designed to help you
    - A curated collection of **essential books** to learn **Python** and **Data Structures & Algorithms (DSA)** for your AI journey.  
 
 ## 💡 **How to Contribute**  
-    Help others in their **Generative AI journey**. 🚀
+    Help others in their Generative AI journey. 🚀
