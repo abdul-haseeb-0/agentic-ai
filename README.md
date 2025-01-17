@@ -1,6 +1,3 @@
-Here's your GitHub `README.md` file, professionally structured with symbols for an engaging look:
-
----
 
 # Generative_AI
 
