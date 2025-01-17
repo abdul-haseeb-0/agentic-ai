@@ -1,8 +1,4 @@
-Here’s the updated version without asterisks:
-
----
-
-Key Topics and Definitions
+#Key Topics and Definitions
 
 1. Artificial Intelligence (AI):  
 	Definition: Simulation of human intelligence in machines.  
