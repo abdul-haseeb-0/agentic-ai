@@ -22,7 +22,7 @@ Poetry_Available_commands_______________________________________________________
 		  init: Creates a basic pyproject.toml file in the current directory.
 					-> poetry init
 
-		  install:	Installs the project dependencies.
+		  install: Installs the project dependencies.
 					-> poetry install
 
 		  new: Creates a new Python project at <path>.
@@ -31,7 +31,7 @@ Poetry_Available_commands_______________________________________________________
 	 	  remove: Removes a package from the project dependencies.
 					-> poetry remove <package>
 
-		  run:	Runs a command in the appropriate environment.
+		  run: Runs a command in the appropriate environment.
 					-> poetry run <command>
 
 	  	 sync: Update the project's environment according to the lockfile.
