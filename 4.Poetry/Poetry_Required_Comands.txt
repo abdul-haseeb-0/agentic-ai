@@ -28,10 +28,10 @@ Poetry_Available_commands_______________________________________________________
 		  new: Creates a new Python project at <path>.
 					-> poetry new <project_name>
 
-	 	  remove: Removes a package from the project dependencies.
+	 	 remove: Removes a package from the project dependencies.
 					-> poetry remove <package>
 
-		  run: Runs a command in the appropriate environment.
+		   run: Runs a command in the appropriate environment.
 					-> poetry run <command>
 
 	  	 sync: Update the project's environment according to the lockfile.
