@@ -44,7 +44,7 @@ Poetry_Available_commands_______________________________________________________
 		  check: Validates the content of the pyproject.toml file and its consistency with the poetry.lock file.
 					-> poetry check
 
-		  help:	Displays help for a command.
+		  help: Displays help for a command.
 					-> poetry help
 				For specific command help
 					-> poetry help <command>
@@ -61,12 +61,12 @@ Poetry_Available_commands_______________________________________________________
 		   update: Update the dependencies as according to the pyproject.toml file.
 					-> poetry update
 
-	 	   version:	Shows the version of the project or bumps it when a valid bump rule is provided.
+	 	   version: Shows the version of the project or bumps it when a valid bump rule is provided.
 					-> poetry version
 				To update version
 					-> poetry version <new_version>  
 
-		   search:	Searches for packages on remote repositories.
+		   search: Searches for packages on remote repositories.
 					-> poetry search <package>
 
 		   show: Shows information about packages.
