@@ -49,7 +49,7 @@ Poetry_Available_commands_______________________________________________________
 				For specific command help
 					-> poetry help <command>
 
-		   list:	Lists commands.
+		   list: Lists commands.
 					-> poetry list
 
 		   lock: Locks the project dependencies.
@@ -74,7 +74,7 @@ Poetry_Available_commands_______________________________________________________
 				To see all dependencies & their versions.
 					-> poetry show --tree
 
-	    self update:	Update Poetry itself to the latest version.
+	    self update: Update Poetry itself to the latest version.
 					-> poetry self update	
 
 Quick  Examples:
