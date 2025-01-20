@@ -21,6 +21,8 @@ This repository contains well-organized, professional notes designed to help you
 
 ### 3. **Poetry** 📜  
    - All essential **Poetry commands** for managing Python projects, handling dependencies, and streamlining the development process.
+### 4. **FastAPI**
+   - Folder containing different programs using FastAPI to help you **master the basics** of Rest API.
 
 ---
 
