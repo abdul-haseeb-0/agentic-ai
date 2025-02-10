@@ -34,6 +34,17 @@ A **database** is a structured collection of data that allows **efficient storag
 
 # 🐍 MongoDB + PyMongo CRUD
 
+## install mongodb
+
+**Using pip**
+```python
+pip install pymongo
+```
+**Using poetry**
+```python
+poetry add pymongo
+```
+
 ## 🔌 Connect to MongoDB
 
 ```python
