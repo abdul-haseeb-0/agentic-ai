@@ -83,13 +83,13 @@ def read_todos_via_id( id: str ):
 @app.get("/todos/title") 
 def read_todo_via_title( title: str):
     try:
-        todo = db.todos.find_one({"title": title})
+        todo = db.todos.find_one({"_id" : title})
         if todo is None:
             return {
                 "message" : "todo not found"
             }
         return {
-            "data" :{
+            "data" : {
                 "id" : str(todo["_id"]),
                 "title" : todo["title"],
                 "created at" : todo["created_at"]
