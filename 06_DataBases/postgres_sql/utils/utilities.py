@@ -1,6 +1,7 @@
 from fastapi import HTTPException, Depends
 from fastapi.security import OAuth2PasswordBearer
 from typing import Optional
+from passlib.context import CryptContext
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import jwt
@@ -11,10 +12,13 @@ load_dotenv()
 # OAuth2PasswordBearer instance to handle token extraction from request headers
 oauth2scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-# create_token requirements
+# create token context
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
+
+# password hashing
+password_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # create encoded token
 def create_token(data: dict, expires_delta: Optional[timedelta] = None):
@@ -57,3 +61,11 @@ def verify_token(token: str = Depends(oauth2scheme) ):
             "status": "error",
             "data": None
         }
+
+# password hashing
+def hash_password(password: str):
+    return password_context.hash(password)
+
+# password verification
+def verify_password(plain_password: str, hashed_password: str):
+    return password_context.verify(plain_password, hashed_password) # returns bool

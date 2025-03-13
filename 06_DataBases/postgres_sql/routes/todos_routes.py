@@ -8,7 +8,7 @@ from models.models import Todo, Users
 todos_router = APIRouter()
 
 # route to get all todos
-@todos_router.get("/", dependencies=[Depends(verify_token)] )
+@todos_router.get("/", dependencies=[Depends(verify_token)])
 def get_todos(db: Session = Depends(get_db)):
     try:
         todos = db.query(Todo).all()
@@ -24,30 +24,27 @@ def get_todos(db: Session = Depends(get_db)):
             "data": None
         }
 
-# route to create todo by id connected with user
-@todos_router.get("/create")
-def create_todo( todo: CreateTodo, user = Depends(verify_token), db: Session = Depends(get_db)):
+# route to create todo
+@todos_router.post("/create")
+def create_todo(todo: CreateTodo, user = Depends(verify_token), db: Session = Depends(get_db)):
     try:
-        user = db.query(Users).filter(Users.id == todo.user_id).first() #   filter user from Users Table
-        if not user:
-            raise HTTPException( status_code = 404, detail= "User not found")
-        if Users.email != todo.user_email:
-            raise HTTPException( status_code = 404, detail= "Invalid email or password")
-        if Users.password != todo.user_password:
-            raise HTTPException( status_code = 404, detail= "Invalid email or password")   
+        valid_user = db.query(Users).filter(Users.id == todo.user_id).first() # filter user from Users Table
+        if not valid_user:
+            raise HTTPException(status_code=404, detail="User not found")
         new_todo = Todo(
             title=todo.title,
             description=todo.description,
             completed=todo.completed,
-            user_id = todo.user_id
+            user_id=todo.user_id
         )
-        db.add(new_todo) # add new todo to database
-        db.commit() # commit changes
-        db.refresh(new_todo) # refresh database
+        db.add(new_todo)
+        db.commit()
+        db.refresh(new_todo)
         return {
-            "data" : new_todo,
-            "status" : "success",
-            "message" : " todo creates"}
+            "data": new_todo,
+            "status": "success",
+            "message": "Todo created"
+        }
     except Exception as e:
         return {
             "message": str(e),
@@ -56,8 +53,8 @@ def create_todo( todo: CreateTodo, user = Depends(verify_token), db: Session = D
         }
 
 # route to update todo by id
-@todos_router.put("/{todo_id}", dependencies=[Depends(varify_token)])
-def update_todo(todo_id: int, todo_update: CreateTodo, user = Depends(varify_token), db: Session = Depends(get_db)):
+@todos_router.put("/{todo_id}", dependencies=[Depends(verify_token)])
+def update_todo(todo_id: int, todo_update: CreateTodo, user = Depends(verify_token), db: Session = Depends(get_db)):
     try:
         todo = db.query(Todo).filter(Todo.id == todo_id).first()
         if not todo:
@@ -81,7 +78,7 @@ def update_todo(todo_id: int, todo_update: CreateTodo, user = Depends(varify_tok
         }
 
 # route to delete todo by id
-@todos_router.delete("/{todo_id}", dependencies=[Depends(varify_token)])
+@todos_router.delete("/{todo_id}", dependencies=[Depends(verify_token)])
 def delete_todo(todo_id: int, db: Session = Depends(get_db)):
     try:
         todo = db.query(Todo).filter(Todo.id == todo_id).first()
