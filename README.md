@@ -20,7 +20,7 @@ Master **Python for AI** with:
 ### AI Theories & Concepts  
 Deep dive into **AI fundamentals**:  
 🔹 Core AI & ML Theories  
-🔹 Deep Learning & Generative AI Models  
+🔹 Deep Learni& Genng erative AI Models  
 🔹 Emerging AI Technologies  
 
 ### Software Architecture for AI  
@@ -29,7 +29,7 @@ Learn how to **design AI systems** efficiently:
 🔹 Structuring AI-Powered Applications  
 🔹 Best Development Practices  
 
-### Poetry Environment (Project Management)  
+### Poetry Environment
 Effortless **Python project management**:  
 🔹 Setting Up Virtual Environments  
 🔹 Dependency Management with **Poetry**  
@@ -37,16 +37,18 @@ Effortless **Python project management**:
 
 ### FastAPI for AI-Powered APIs  
 Build **high-performance AI APIs**:  
-🔹 Developing RESTful APIs with **FastAPI**  
+🔹 Developing REST APIs with **FastAPI**  
 🔹 Deploying AI-Powered Endpoints  
 🔹 Scalable API Design  
 
 ### Databases for AI Applications  
-Efficient **data storage & management**:  
+Efficient **data storage & management on cloud**:  
 🔹 **PostgreSQL (SQL)** – Structured AI Data  
 🔹 **MongoDB (NoSQL)** – Flexible Data Solutions  
 
-### AI & Tech Books Collection  
+---
+
+## AI & Tech Books Collection  
 Stay ahead with **top AI books**:  
 🔹 Python & Data Science Essentials  
 🔹 Machine Learning & AI Frameworks  
