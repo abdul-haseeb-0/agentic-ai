@@ -1,14 +1,14 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from models.models import Users
 from validations.validations import UserLogin, CreateUser
-from utils.utilities import create_token, hash_password, verify_password
+from utils.utilities import create_token, hash_password, verify_password, verify_api_key
 from config.database import get_db
 
 users_router = APIRouter()
 
 # create user
-@users_router.get("/create")
+@users_router.post("/create")
 def create_user(user: CreateUser, db: Session = Depends(get_db)):
     try:
         new_user = Users(name=user.name, email=user.email, password=hash_password(user.password))
@@ -29,7 +29,7 @@ def create_user(user: CreateUser, db: Session = Depends(get_db)):
 
 # user login
 @users_router.post("/login")
-def user_login(user: UserLogin, db: Session = Depends(get_db)):
+def user_login(user: UserLogin, db: Session = Depends(get_db), api_key= Depends(verify_api_key)):
     try:
         valid_user = db.query(Users).filter(Users.email == user.email).first()
         if not valid_user:
