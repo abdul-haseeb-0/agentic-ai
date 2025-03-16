@@ -15,9 +15,9 @@ Install Pandas using pip:
 ```bash
 pip install pandas
 ```
-Or for conda users:
+Or for poetry users:
 ```bash
-conda install pandas
+poetry add pandas
 ```
 
 ---
