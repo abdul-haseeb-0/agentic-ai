@@ -1,10 +1,18 @@
 import numpy as np
 
-# Creating a 1D array
-arr1 = np.array([1, 2, 3, 4, 5])
+# Create a array
+# -------------------------------
+arr_1d = np.array([1, 2, 3, 4, 5])
+print(arr_1d)
 
-# Creating a 2D array
-arr2 = np.array([[1, 2, 3], [4, 5, 6]])
+# Create a 2D array
+arr_2d = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr_2d)
 
-print(arr1)
-print(arr2)
+# Properties of the array
+# -------------------------------
+print(arr_2d.shape) # (2, 3)
+print(arr_2d.size) # 6
+print(arr_2d.ndim) # 2
+print(arr_2d.dtype) # int32
+
