@@ -37,16 +37,16 @@ print(df)
 # Selecting Data
 # --------------
 # Selecting Columns from data
-print(data["Name"])  # select Column
-print(pd.Series(data["Name"]))  # select & print Column as Series
+data["Name"]  # select Column
+pd.Series(data["Name"])  # select & print Column as Series
 
 # Selecting data from DataFrame
-print(df["Name"])  # select Name Column
-print(df[["ID", "Salary"]])  # select ID and Salary Column
+df["Name"]  # select Name Column
+df[["ID", "Salary"]]  # select ID and Salary Column
 
-print(df.iloc[0])  # select first row. iloc -> index location
-print(df.loc[1])  # select second row of index 1. loc -> location
-print(df.loc[df["Salary"] < 55000])  # select rows where salary is less than 55000
+df.iloc[0]  # select first row. iloc -> index location
+df.loc[1]  # select second row of index 1. loc -> location
+df.loc[df["Salary"] < 55000]  # select rows where salary is less than 55000
 
 
 
@@ -137,16 +137,16 @@ df.to_csv("Employee.csv", index=False)
 # Data Inspection
 # ---------------
 df = pd.read_csv("Employee.csv")
-print(df.head())                    # First 5 rows
-print(df.head(10))                  # First 10 rows
-print(df.tail())                    # Last 5 rows
-print(df.info())                    # Data types and non-null values
-print(df.describe())                # Summary statistics (mean, std, min, max, etc.)
+df.head()                    # First 5 rows
+df.head(10)                  # First 10 rows
+df.tail()                    # Last 5 rows
+df.info()                    # Data types and non-null values
+df.describe()                # Summary statistics (mean, std, min, max, etc.)
 
-print(df.shape)                     # (rows, columns)
-print(df.columns)                   # Column names
-print(df.index)                     # Index range
-print(df.dtypes)                    # Data types of columns
+df.shape                     # (rows, columns)
+df.columns                   # Column names
+df.index                     # Index range
+df.dtypes                    # Data types of columns
 
 
 
@@ -158,4 +158,4 @@ df["Salary_after_Tax"] = df["Salary"].apply(lambda x: x * 0.6)
 # Chunking
 chunk_size = 10000
 for chunk in pd.read_csv("file.csv", chunksize=chunk_size):
-    process(chunk)  # Process each chunk separately
+    process(chunk)  # type: ignore
