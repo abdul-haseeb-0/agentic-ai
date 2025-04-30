@@ -6,8 +6,8 @@ Large Language Models (LLMs) like **Gemini**, **GPT**, **Grok**, and **DeepSeek*
 ## 🔹 Installation (If Needed for SDKs)
 
 ```bash
-pip install openai
-pip install google-generativeai
+pip install langchain_openai
+pip install langchain_google_genai
 ```
 ---
 # 🎯 Core Generation Settings
@@ -79,9 +79,9 @@ pip install google-generativeai
 # ⚙️ Example: How to Configure an LLM
 
 ```python
-from google.generativeai import GenerativeModel
+from langchain_google_genai import GoogleGenerativeAI
 
-llm = GenerativeModel(
+llm = GoogleGenerativeAI(
     model="gemini-1.5-flash",
     temperature=0.7,
     top_p=0.9,
