@@ -1,11 +1,6 @@
-# As we cover more and more examples and applications with prompt engineering, you will notice that certain elements make up a prompt.
-
 # A prompt contains any of the following elements:
-
 # Instruction - a specific task or instruction you want the model to perform
-
 # Context - external information or additional context that can steer the model to better responses
-
 # Input Data - the input or question that we are interested to find a response for
 
 from langchain_google_genai import GoogleGenerativeAI
@@ -45,6 +40,3 @@ result = llm.invoke(prompt)
 
 # Print the result
 print(result)
-
-
-#To see examples: see here: https://www.promptingguide.ai/introduction/examples

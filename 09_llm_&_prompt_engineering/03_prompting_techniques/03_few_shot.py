@@ -33,7 +33,8 @@ Sentiment: neutral
 
 Now, classify this sentence:
 Sentence: {user_input}
-Sentiment:"""
+Sentiment:
+"""
 
 # Invoke the LLM with the few-shot prompt
 result = llm.invoke(few_shot_prompt)
