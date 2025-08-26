@@ -26,6 +26,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",
 
 loader = WebBaseLoader(
     "https://aurorasolar.com/blog/how-do-solar-panels-work-everything-you-need-to-know/")
+    
 docs = loader.load()
 documents = RecursiveCharacterTextSplitter(
     chunk_size=1000, chunk_overlap=200
